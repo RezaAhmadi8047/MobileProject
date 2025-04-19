@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#FF0000"
+
         android:gravity="center">
         <androidx.cardview.widget.CardView
             android:layout_width="110dp"
@@ -32,10 +32,11 @@
             android:textColor="@color/white"/>
         <EditText
             android:id="@+id/name"
-            android:layout_width="300dp"
+            android:layout_width="290dp"
             android:layout_height="60dp"
             android:background="@color/white"
             android:textColor="@color/black"
+            android:hint="Enter your name"
             android:padding="5dp"/>
     </LinearLayout>
     <LinearLayout
@@ -49,10 +50,11 @@
             android:textColor="@color/white"/>
         <EditText
             android:id="@+id/family"
-            android:layout_width="300dp"
+            android:layout_width="290dp"
             android:layout_height="60dp"
             android:background="@color/white"
             android:textColor="@color/black"
+            android:hint="Enter your family"
             android:padding="5dp"/>
     </LinearLayout>
     <LinearLayout
@@ -66,10 +68,11 @@
             android:textColor="@color/white"/>
         <EditText
             android:id="@+id/phone"
-            android:layout_width="300dp"
+            android:layout_width="290dp"
             android:layout_height="60dp"
             android:background="@color/white"
             android:textColor="@color/black"
+            android:hint="Enter your phone"
             android:padding="5dp"/>
     </LinearLayout>
     <LinearLayout
@@ -83,22 +86,41 @@
             android:textColor="@color/white"/>
         <EditText
             android:id="@+id/email"
-            android:layout_width="300dp"
+            android:layout_width="290dp"
             android:layout_height="60dp"
             android:background="@color/white"
             android:textColor="@color/black"
+            android:hint="Enter your email"
             android:padding="5dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
-        <Button
-            android:id="@+id/btn_save"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
             android:layout_width="200dp"
-            android:layout_height="70dp"
-            android:text="Save Profile"
-            android:textSize="20dp"/>
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_log"
+                android:layout_width="180dp"
+                android:layout_height="70dp"
+                android:text=""
+                android:textSize="15dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="Next"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

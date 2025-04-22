@@ -11,7 +11,7 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SecendActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPref;
 
@@ -25,18 +25,23 @@ public class SecendActivity extends AppCompatActivity {
         EditText phone=findViewById(R.id.phone);
         EditText email=findViewById(R.id.email);
 
-        Intent intent=new Intent(SecendActivity.this,SaveActivity.class);
-        Intent intent1=new Intent(SecendActivity.this,ShowProfileActivity.class);
+
+        Intent intent=new Intent(SecondActivity.this,SaveActivity.class);
+        Intent intent1=new Intent(SecondActivity.this,ShowProfileActivity.class);
 
 
         Button btn_next = findViewById(R.id.btn_next);
         btn_next.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        intent.putExtra("NAME",name.getText().toString());
-        intent.putExtra("FAMILY",family.getText().toString());
-        intent.putExtra("PHONE",phone.getText().toString());
-        intent.putExtra("EMAIL",email.getText().toString());
+
+        UserProfile user=new UserProfile(
+                name.getText().toString()
+                ,family.getText().toString()
+                ,phone.getText().toString(),
+                email.getText().toString());
+
+        intent.putExtra("User_key",user);
         startActivity(intent);
     }
 });
